@@ -13,9 +13,6 @@ class Greetings(commands.Cog):
     async def on_member_join(self, member):
         channel = member.guild.system_channel
         rules_channel = self.bot.get_channel(747431013281562705)
-        role = discord.utils.get(member.guild.roles, name='NooPy')
-        await member.add_roles(role)
-
         if channel is not None:
             await channel.send(f'Hello {member.mention}, please read the {rules_channel.mention}')
 

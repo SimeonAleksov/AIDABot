@@ -14,20 +14,22 @@ class Sandbox(commands.Cog, name="Sandbox"):
     @commands.has_role("Owner")
     async def rules(self, ctx: commands.Context):
         rules_channel = self.bot.get_channel(747431013281562705)
-        rules = "" \
-                "• Be nice. \n" \
-                "• Be mature. \n" \
-                "• Follow the law.\n" \
-                "• Listen to the mods. \n" \
-                "• Ask your question directly (https://dontasktoask.com/) and don't post across multiple channels or " \
-                "ask people for programming help in DMs. \n" \
-                "***React to this message to accept the rules, and you will be granted access to the rest of the channels.***"
-        await rules_channel.send(rules)
+        embed = discord.Embed(title="PyCord rules", type="rich", color=0x2471c7)
+        embed.add_field(name="Rule #1", value="Be nice.", inline=False)
+        embed.add_field(name="Rule #2", value="Be mature.", inline=False)
+        embed.add_field(name="Rule #3", value="Follow the law.", inline=False)
+        embed.add_field(name="Rule #4", value="Listen to the mods.", inline=False)
+        embed.add_field(name="Rule #5", value="Ask your question directly (https://dontasktoask.com/) and don't post across "
+                                        "multiple channels or ask people for programming help in DMs..", inline=False)
+        embed.set_footer(text="React to this message to accept the rules, and you will be granted access to the rest "
+                              "of the channels.")
+
+        await rules_channel.send(embed=embed)
 
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         message_id = payload.message_id
-        if message_id == 754198635192778762:
+        if message_id == 754343872099778580:
             guild_id = payload.guild_id
             guild = discord.utils.find(lambda g: g.id == guild_id, self.bot.guilds)
             if payload.emoji.name == "yeah":

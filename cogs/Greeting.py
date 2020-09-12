@@ -26,6 +26,16 @@ class Greetings(commands.Cog):
             await ctx.send(f'Hello {member.mention}... This feels familiar.')
         self._last_member = member
 
+    @commands.command()
+    async def source(self, ctx, *, member: discord.Member = None):
+        member = member or ctx.author
+        await ctx.send(f"{member.mention}, my source code is here: https://github.com/SimeonAleksov/MerriBot")
+
+    @commands.command()
+    async def name(self, ctx, *, member: discord.Member = None):
+        await ctx.send("Artificial Intelligent Digital Assistant (A.I.D.A.)\n "
+                       "https://marvelcinematicuniverse.fandom.com/wiki/Aida")
+
 
 def setup(bot: Bot):
     bot.add_cog(Greetings(bot))

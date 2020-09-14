@@ -13,6 +13,7 @@ class Bot(commands.Bot):
         )
 
     def load_all_cogs(self):
+        self.remove_command('help')
         for filename in os.listdir('cogs'):
             if filename.endswith('.py'):
                 try:

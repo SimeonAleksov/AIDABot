@@ -3,7 +3,7 @@ import discord
 from Bot import Bot
 
 
-class Sandbox(commands.Cog, name="Sandbox"):
+class Sandbox(commands.Cog, name="Rules"):
     """Rules cog"""
 
     def __init__(self, bot: Bot):
@@ -13,14 +13,16 @@ class Sandbox(commands.Cog, name="Sandbox"):
     @commands.command()
     @commands.has_role("Owner")
     async def rules(self, ctx: commands.Context):
+        """Rules for this server"""
         rules_channel = self.bot.get_channel(747431013281562705)
         embed = discord.Embed(title="PyCord rules", type="rich", color=0x2471c7)
         embed.add_field(name="Rule #1", value="Be nice.", inline=False)
         embed.add_field(name="Rule #2", value="Be mature.", inline=False)
         embed.add_field(name="Rule #3", value="Follow the law.", inline=False)
         embed.add_field(name="Rule #4", value="Listen to the mods.", inline=False)
-        embed.add_field(name="Rule #5", value="Ask your question directly (https://dontasktoask.com/) and don't post across "
-                                        "multiple channels or ask people for programming help in DMs..", inline=False)
+        embed.add_field(name="Rule #5",
+                        value="Ask your question directly (https://dontasktoask.com/) and don't post across "
+                              "multiple channels or ask people for programming help in DMs..", inline=False)
         embed.set_footer(text="React to this message to accept the rules, and you will be granted access to the rest "
                               "of the channels.")
 
@@ -45,7 +47,7 @@ class Sandbox(commands.Cog, name="Sandbox"):
             else:
                 print("Role not found")
         else:
-            print("nop")
+            pass
 
 
 def setup(bot: Bot):

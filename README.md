@@ -12,10 +12,10 @@ Format
 # code here
 
 Example
-\`\`\`py
+```py
 if True:
   print("Hi!")
-\`\`\`
+```
 Output 
 if True: 
   print("Hi!") Requested for "User"

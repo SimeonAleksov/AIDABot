@@ -33,7 +33,7 @@ if True:
  
 
 ```
-Help with the spotify` command
+Help with the spotify command
 Documentation: 										Arguments
 Information about a song that user is listening 	   [user]
 ```

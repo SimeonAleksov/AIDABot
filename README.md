@@ -21,7 +21,7 @@ if True:
   print("Hi!") Requested for "User"
 ```
 
-> if True:print('smh'+'123')
+`> if True:print('smh'+'123')`
 
 
 `>$format py`

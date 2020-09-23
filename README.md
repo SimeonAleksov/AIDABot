@@ -30,6 +30,8 @@ if True:
     print('smh'+'123')
 
  `>$help spotify`
+ 
+
 ```
 Help with the spotify` command
 Documentation: 										Arguments

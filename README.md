@@ -29,8 +29,10 @@ if True:
 if True:
     print('smh'+'123')
 
- `>$help spotify`
- 
+```
+
+`>$help spotify`
+
 
 ```
 Help with the spotify command

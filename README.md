@@ -12,10 +12,10 @@ Format
 # code here
 
 Example
-
+\`\`\`py
 if True:
-print("Hi!")
-
+  print("Hi!")
+\`\`\`
 Output 
 if True: 
   print("Hi!") Requested for "User"
@@ -36,6 +36,6 @@ if True:
 
 ```
 Help with the spotify command
-Documentation: 										Arguments
-Information about a song that user is listening 	   [user]
+Documentation:  Arguments
+Information about a song that user is listening [user]
 ```

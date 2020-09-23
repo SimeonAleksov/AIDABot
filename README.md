@@ -1,9 +1,10 @@
 # AIDABot
-Discord bot 
-
 
 Moderation bot, programming help bot with proper formatting, searching through documentaion(in progress)
-`> $code
+
+
+`> $code`
+
 ```
 Code formatting
 Format
@@ -21,7 +22,9 @@ if True:
 ```
 
 > if True:print('smh'+'123')
->$format py
+
+
+`>$format py`
 ```py
 if True:
     print('smh'+'123')
